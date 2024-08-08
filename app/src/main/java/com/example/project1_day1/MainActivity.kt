@@ -4,6 +4,7 @@ package com.example.project1_day1
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -11,13 +12,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.Days.DayTwo.SpanLearn
 import com.example.Days.DayTwo.displayTwo
+import com.example.Days.DayTwo.selectableText
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             Column(modifier=Modifier.fillMaxSize()) {
-                displayTwo()
+                Box(){
+                    selectableText()
+                }
+                Box(){
+                    displayTwo()
+                }
             }
         }
     }
@@ -26,9 +33,12 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     Column(modifier=Modifier.fillMaxSize()) {
-        SpanLearn()
+        Box(){
+            selectableText()
+        }
+        Box(){
+            displayTwo()
+        }
     }
-    Column(modifier=Modifier.fillMaxSize()) {
-        displayTwo()
-    }
+
 }
