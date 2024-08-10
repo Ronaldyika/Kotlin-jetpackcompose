@@ -32,7 +32,7 @@ fun ExpandibleCard(){
         .fillMaxWidth()
         .animateContentSize(
             animationSpec = tween(
-                durationMillis = 30,
+                durationMillis = 3000,
                 easing = FastOutSlowInEasing
             )
         ),
@@ -60,6 +60,10 @@ fun ExpandibleCard(){
                     .weight(1f)
                     .rotate(rotatebutton)
                 ,onClick = {
+                    var count = 1;
+                    count +=1;
+                    
+                    println(count)
                     expandedState=!expandedState
                 }) {
                 Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = "expand card",)

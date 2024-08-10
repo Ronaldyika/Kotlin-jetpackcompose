@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.Days.DayFour.cardExpand
 import com.example.Days.DayTwo.ExpandibleCard
 import com.example.Days.DayTwo.SpanLearn
 import com.example.Days.DayTwo.displayTwo
@@ -19,6 +20,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            cardExpand()
 //            Column(modifier=Modifier.fillMaxSize()) {
 //                Box(){
 //                    selectableText()
@@ -27,21 +29,13 @@ class MainActivity : ComponentActivity() {
 //                    displayTwo()
 //                }
 //            }
-            ExpandibleCard()
+//            ExpandibleCard()
+            cardExpand()
         }
     }
 }
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-//    Column(modifier=Modifier.fillMaxSize()) {
-//        Box(){
-//            selectableText()
-//        }
-//        Box(){
-//            displayTwo()
-//        }
-//    }
-    ExpandibleCard()
-
+    cardExpand()
 }
