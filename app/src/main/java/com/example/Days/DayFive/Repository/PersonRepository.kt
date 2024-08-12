@@ -53,6 +53,24 @@ class PersonRepository {
                 "julie",
                 18
             ),
+            Person(
+                1,
+                "Ronald ",
+                "Yika",
+                23
+            ),
+            Person(
+                2,
+                "Yika",
+                "julie",
+                18
+            ),
+            Person(
+                1,
+                "Ronald ",
+                "Yika",
+                23
+            ),
         )
         }
 //    fun getinfo():List<Person>{

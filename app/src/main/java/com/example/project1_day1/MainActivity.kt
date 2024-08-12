@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.Days.DayFive.lazyLoaddata
 import com.example.Days.DayFour.cardExpand
 import com.example.Days.DayTwo.ExpandibleCard
 import com.example.Days.DayTwo.SpanLearn
@@ -20,7 +21,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            cardExpand()
+            lazyLoaddata()
+//            cardExpand()
 //            Column(modifier=Modifier.fillMaxSize()) {
 //                Box(){
 //                    selectableText()
@@ -37,5 +39,6 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    cardExpand()
+//    cardExpand()
+    lazyLoaddata()
 }
