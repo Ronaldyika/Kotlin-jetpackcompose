@@ -10,18 +10,22 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.Days.DayFive.CounterApplication
 import com.example.Days.DayFive.lazyLoaddata
 import com.example.Days.DayFour.cardExpand
 import com.example.Days.DayTwo.ExpandibleCard
 import com.example.Days.DayTwo.SpanLearn
 import com.example.Days.DayTwo.displayTwo
 import com.example.Days.DayTwo.selectableText
+import java.security.AccessController
 
 class MainActivity : ComponentActivity() {
+//    lateinit var navController:NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            lazyLoaddata()
+            CounterApplication()
+//            lazyLoaddata()
 //            cardExpand()
 //            Column(modifier=Modifier.fillMaxSize()) {
 //                Box(){
@@ -39,6 +43,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
+    CounterApplication()
 //    cardExpand()
     lazyLoaddata()
 }
